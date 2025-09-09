@@ -1,0 +1,109 @@
+
+/* ===== Header with Navbar (used on inner pages) ===== */
+.site-header.navbar {
+  background-color: #0e2344;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: 15px; /* Height of the bottom bar */
+  overflow: hidden;
+}
+
+.site-header.navbar .header-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 7px 58px 0;
+}
+
+.site-header.navbar .header-top {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 63px;
+}
+
+.site-header.navbar .logo {
+  width: 47px;
+  height: 47px;
+  flex-shrink: 0;
+}
+
+.site-header.navbar .site-title h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.site-header.navbar .site-title p {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 2px 0 0 0;
+  line-height: 1.2;
+}
+
+.site-header.navbar .main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+}
+
+.site-header.navbar .nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f2547;
+  border: 3px solid #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  height: 56px;
+  padding: 0 22px;
+  white-space: nowrap;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.site-header.navbar .nav-link:hover,
+.site-header.navbar .nav-link.active {
+  background-color: #ffffff;
+  color: #0f2547;
+}
+
+.site-header.navbar .bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background-color: var(--footer-border-color);
+}
+
+@media (max-width: 1200px) {
+  .site-header.navbar .header-container { padding: 20px 30px 0; }
+  .site-header.navbar .main-nav { justify-content: center; gap: 20px; }
+}
+
+@media (max-width: 992px) {
+  .site-header.navbar .header-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  .site-header.navbar .main-nav { gap: 15px; }
+  .site-header.navbar .nav-link {
+    font-size: 18px;
+    height: 50px;
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header.navbar .nav-link {
+    font-size: 16px;
+    height: 44px;
+    padding: 0 12px;
+  }
+  .site-header.navbar .site-title h1 { font-size: 24px; }
+  .site-header.navbar .site-title p  { font-size: 16px; }
+}
